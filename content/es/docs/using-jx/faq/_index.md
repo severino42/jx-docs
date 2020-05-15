@@ -230,7 +230,7 @@ Hemos centrado la automatización de los CI/CD en Jenkins X para ayudar a los eq
 
 Si tiene un monorepo existente que desea importar a Jenkins X, puede hacerlo; solo tenga en cuenta que tendrá que crear y mantener sus propios pipelines para su monorepo. Tan solo modifíquelos en su fichero `jenkins-x.yml` después de importar su monorepo.
 
-Vea cómo [agregar un paso personalizado a su pipeline](/about/concepts/jenkins-x-pipelines/#customizing-the-pipelines).
+Vea cómo [agregar un paso personalizado a su pipeline](/about/concepts/jenkins-x-pipelines/).
 
 ## ¿Cómo se inyectan secretos de Vault en entornos de staging/production/preview?
 

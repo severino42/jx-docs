@@ -83,7 +83,7 @@ jx delete preview
 
 When you create a Pull Request by default Jenkins X creates a new [Preview Environment](/about/concepts/features/#preview-environments). Since this is a new dynamic namespace you may want to configure additional microservices in the namespace so you can properly test your preview build.
 
-To find out more see [how to add dependent charts, services or configuration to your preview environment](/docs/reference/preview/#adding-more-resources)
+To find out more see [how to add dependent charts, services or configuration to your preview environment](/docs/build-test-preview/preview/#adding-more-resources)
 
 
 ## Can I use my existing release pipeline?
@@ -118,7 +118,7 @@ The kubernetes resources being deployed are defined as YAML files in the source 
 
 Then the Jenkins X release pipeline automatically tars up the YAML files into an immutable versioned tarball (using the same version number as the docker image, git tag and release notes) and deploys it into a chart repository of your choice (defaults to chartmuseum but you can easily switch that to cloud storage/nexus/whatever) so that the immutable release can be easily used by any promotion.
 
-Promotion in Jenkins X is completely separate to Release & we support promoting any releases if packaged as a helm chart. Promotion via [jx promote](/docs/getting-started/promotion/) CLI generates a Pull Request in the git repository for an environment (Staging, Canary, Production or whatever). This is GitOps basically - specifying which versions and configurations of which apps are in each environment using a git repository and configuration as code.
+Promotion in Jenkins X is completely separate to Release & we support promoting any releases if packaged as a helm chart. Promotion via [jx promote](/docs/build-test-preview/promotion/) CLI generates a Pull Request in the git repository for an environment (Staging, Canary, Production or whatever). This is GitOps basically - specifying which versions and configurations of which apps are in each environment using a git repository and configuration as code.
 
 The PR triggers a CI pipeline to verify the changes are valid (e.g. the helm chart exists and can be downloaded, the docker images exist etc). Whenever the PR gets merged (could be automatically or may require additional reviews/+1s/JIRA/ServiceNow tickets or whatever) - then another pipeline is triggered to apply the helm charts from the master branch to the destination k8s cluster and namespace.
 
@@ -159,7 +159,7 @@ Then if you wish to use another configuration management tool you can add it in 
 
 ## How do I change the domain of serverless apps?
 
-If you use [serverless apps](/docs/guides/tutorials/serverless-apps/) with Knative we don't use thee default exposecontroller mechanism for defaulting the `Ingress` resources since knative does not use kubernetes `Service` resources.
+If you use [serverless apps](/docs/resources/guides/webinars/serverless-apps/) with Knative we don't use thee default exposecontroller mechanism for defaulting the `Ingress` resources since knative does not use kubernetes `Service` resources.
 
 You can work around this by manually editing the _knative_ config via:
 
@@ -223,13 +223,13 @@ To see an example of where we add multiple annotations that the `exposecontrolle
 
 If you have an existing monorepo you want to import into Jenkins X you can; just be aware that you'll have to create and maintain your own pipelines for your monorepo. So just modify them `jenkins-x.yml` file after you import your monorepo.
 
-See how to [add a custom step to your pipeline](/about/concepts/jenkins-x-pipelines/#customizing-the-pipelines).
+See how to [add a custom step to your pipeline](/about/concepts/jenkins-x-pipelines/).
 
 ## How do I inject Vault secrets into staging/production/preview environments?
 
 ### Staging/Production
 
-By default, [enabling Vault](/docs/getting-started/setup/boot/#vault) via `jx boot`'s `jx-requirements.yml` will only activate it in your pipeline and preview environments, not in staging and production. To also activate it in those environments, simply add a `jx-requirements.yml` file to the root of their repo, with at least the following content:
+By default, [enabling Vault](/docs/install-setup/installing/boot/#vault) via `jx boot`'s `jx-requirements.yml` will only activate it in your pipeline and preview environments, not in staging and production. To also activate it in those environments, simply add a `jx-requirements.yml` file to the root of their repo, with at least the following content:
 
 ```yaml
 secretStorage: vault

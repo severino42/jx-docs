@@ -24,7 +24,7 @@ If you are using GitOps we hope to automate the population of the [repositories/
 
 The install/upgrade process is defined in a [Jenkins X Pipeline](/about/concepts/jenkins-x-pipelines/) in a file called [jenkins-x.yml](https://github.com/jenkins-x/jenkins-x-boot-config/blob/master/jenkins-x.yml).
 
-Typically you won't need to edit this file; though if you do see the [editing guide](/about/concepts/jenkins-x-pipelines/#customizing-the-pipelines).
+Typically you won't need to edit this file; though if you do see the [editing guide](/about/concepts/jenkins-x-pipelines/).
 
 ## Configuration
 

@@ -17,7 +17,7 @@ However when working in the enterprise you may wish to use different git servers
 
 We highly recommend you use [boot](/docs/getting-started/setup/boot/) to install and configure Jenkins X.
 
-If you are using boot then use [these instructions for configuring git](/docs/getting-started/setup/boot/#git)
+If you are using boot then use [these instructions for configuring git](/docs/install-setup/installing/boot/#git)
 
 
 ## Listing git servers

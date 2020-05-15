@@ -7,6 +7,7 @@ description: >
 aliases:
   - /docs/resources/guides/using-jx/creating/
   - /docs/getting-started/first-project/create-quickstart/
+  - /developing/create-quickstart/
 ---
 
 Quickstarts are pre-made applications you can start a project from, instead of

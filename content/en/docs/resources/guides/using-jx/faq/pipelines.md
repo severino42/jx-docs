@@ -9,7 +9,7 @@ For more background see the guide on [Serverless Jenkins X Pipelines](/about/con
 
 ## How do I add a custom step?
 
-To add a new custom step to your `jenkins-x.yml` file see [how to use the jx create step](/about/concepts/jenkins-x-pipelines/#customizing-the-pipelines)
+To add a new custom step to your `jenkins-x.yml` file see [how to use the jx create step](/about/concepts/jenkins-x-pipelines/)
 
 ## How do I override a step?
 
@@ -60,11 +60,8 @@ For more detail check out [how to override steps](/docs/reference/pipeline-synta
 
 ## How do Jenkins X Pipelines compare to Jenkins pipelines?
 
-See [the differences between Jenkins X and Jenkins Pipelines](/about/concepts/jenkins-x-pipelines/#differences-to-jenkins-pipelines)
+See [Jenkins X Pipelines](/docs/build-test-preview/jenkins-x-pipelines/)
 
-## How do I get IDE completion editing `jenkins-x.yml`
-
-See the IDE guide for [IDEA](/about/concepts/jenkins-x-pipelines/#editing-in-vs-code) and [VS Code](/about/concepts/jenkins-x-pipelines/#editing-in-vs-code)
 
 ## What environment variables are available by default inside a pipeline?
 
